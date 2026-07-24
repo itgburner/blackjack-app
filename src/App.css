@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #0b5d32;
+  color: white;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 22px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.game {
+  width: min(1000px, 94%);
+  margin: 0 auto;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.message {
+  min-height: 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.hand {
+  margin: 25px 0;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.card {
+  width: 90px;
+  height: 125px;
+  padding: 10px;
+  border: 2px solid #222;
+  border-radius: 10px;
+  background: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 30%);
+}
+
+.card span:first-child {
+  align-self: flex-start;
+}
+
+.card span:last-child {
+  align-self: flex-end;
+  font-size: 2rem;
+}
+
+.card.red {
+  color: #c1121f;
+}
+
+.hidden-card {
+  justify-content: center;
+  background: repeating-linear-gradient(
+    45deg,
+    #173f8a,
+    #173f8a 10px,
+    #2359b5 10px,
+    #2359b5 20px
+  );
+  color: white;
+}
+
+.total {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.player-hands {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+.active-hand {
+  padding: 0 20px;
+  border: 3px solid #ffd166;
+  border-radius: 12px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+.bankroll {
+  width: min(700px, 100%);
+  margin: 20px auto;
+  padding: 18px;
+  border-radius: 12px;
+  background: rgb(0 0 0 / 20%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: end;
+  gap: 20px;
+}
+
+.bankroll > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bankroll strong {
+  font-size: 1.7rem;
+}
+
+.bankroll label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: bold;
+}
+
+.bankroll input {
+  width: 130px;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 7px;
+  font-size: 1rem;
+}
+
+.bet-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.bet-buttons button {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+}
+
+.hand-bet {
+  font-weight: bold;
+}
+
+.out-of-money {
+  font-weight: bold;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  transform: none;
+}
